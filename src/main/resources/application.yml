@@ -15,7 +15,9 @@ info:
     profile: ${spring.profiles.active}
   serverInfo:
     os: ${os.name}
-
+  user:
+    timeZone: ${user.timezone}
+    country: ${user.country}
 
 management:
   endpoints:
