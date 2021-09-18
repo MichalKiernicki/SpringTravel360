@@ -16,3 +16,9 @@ info:
     profile: ${spring.profiles.active}
   serverInfo:
     os: ${os.name}
+
+managment:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
