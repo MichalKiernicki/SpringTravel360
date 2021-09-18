@@ -8,7 +8,6 @@ spring:
     hibernate:
       ddl-auto: update
 
-# ACTUATOR INFO
 info:
   app:
     name: @project.name@
@@ -17,7 +16,8 @@ info:
   serverInfo:
     os: ${os.name}
 
-managment:
+
+management:
   endpoints:
     web:
       exposure:
