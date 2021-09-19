@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 
 @Data
 @Builder
@@ -18,7 +19,7 @@ public class User {
     @Id
     @GeneratedValue
     private Long id;
-
+    @NotEmpty
     @Column(unique = true)
     private String login;
 
