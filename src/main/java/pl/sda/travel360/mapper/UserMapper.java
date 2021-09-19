@@ -6,12 +6,16 @@ import pl.sda.travel360.dto.UserDTO;
 
 @Service
 public class UserMapper {
-
+// tu nie podajemy hasła
     public UserDTO mapToDTO(User user) {
         return UserDTO.builder()
                 .id(user.getId())
                 .firstName(user.getFirstName())
                 .lastName(user.getLastName())
+                .phoneNumber(user.getPhoneNumber())
+                .email(user.getEmail())
+                .confirmEmail(user.getConfirmEmail())
+                .login(user.getLogin())
                 .build();
     }
     public User mapToUser(UserDTO userDTO){

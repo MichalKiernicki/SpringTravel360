@@ -5,14 +5,12 @@ import lombok.Data;
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 
 @Data
 public class AddUserRequest {
 
+    @NotNull
     private String login;
     @Size(min = 8, max = 32)
     private String password;

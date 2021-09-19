@@ -23,15 +23,17 @@ public class UserController {
         var users= service.getAllUsers();
         return GetUserResponse.of(users);
     }
-    @Valid
+
     @PostMapping
-    public void addUser(@RequestBody AddUserRequest request){
+    public void addUser(@Valid @RequestBody AddUserRequest request){
         var userDto = UserDTO.builder()
                 .login(request.getLogin())
                 .email(request.getEmail())
                 .phoneNumber(request.getPhoneNumber())
                 .firstName(request.getFirstName())
                 .lastName(request.getLastName())
+                .confirmEmail(request.getConfirmEmail())
+                .password(request.getPassword())
                 .build();
         service.addUser(userDto);
     }
