@@ -22,4 +22,5 @@ public class AddUserRequest {
     private String phoneNumber;
     @Email
     private String confirmEmail;
+
 }
