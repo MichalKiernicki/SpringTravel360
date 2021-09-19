@@ -18,6 +18,8 @@ info:
   user:
     timeZone: ${user.timezone}
     country: ${user.country}
+  metrics:
+
 
 management:
   endpoints:
