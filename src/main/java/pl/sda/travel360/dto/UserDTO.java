@@ -20,6 +20,5 @@ public class UserDTO {
     private String email;
     private String phoneNumber;
     private String confirmEmail;
-    private boolean confirmationStatus;
 
 }
