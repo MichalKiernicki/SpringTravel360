@@ -2,9 +2,6 @@ package pl.sda.travel360.contoller.request;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 import javax.validation.constraints.*;
 
 @Data
