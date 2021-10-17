@@ -10,7 +10,7 @@ public class AddUserRequest {
     @NotNull
     @NotEmpty
     private String login;
-    @Size(min = 8, max = 32)
+    //@Size(min = 8, max = 32)
     private String password;
     @NotEmpty
     private String firstName;

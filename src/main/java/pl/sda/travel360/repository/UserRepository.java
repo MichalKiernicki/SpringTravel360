@@ -11,6 +11,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
     boolean existsByConfirmEmailOrLogin (String login, String email);
 
-
     Optional<User> findByConfirmationId (String confirmationId);
+
+    Optional<User> findUserByLogin (String login);
 }

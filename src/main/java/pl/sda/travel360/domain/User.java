@@ -9,6 +9,8 @@ import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import java.time.LocalDateTime;
+import java.util.HashSet;
+import java.util.Set;
 
 @Data
 @Builder
@@ -41,10 +43,12 @@ public class User {
     @Email
     private String confirmEmail;
 
-    private boolean confirmationStatus;
+    private boolean confirmationStatus = false;
     @Column(unique = true)
     private String confirmationId;
     private LocalDateTime validTo;
 
+    @ElementCollection(fetch = FetchType.EAGER)
+    private Set<String> roles = new HashSet<>();
 
 }
